@@ -1,4 +1,4 @@
-module color_print
+module myProject/pkgs
 
 go 1.19
 
