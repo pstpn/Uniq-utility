@@ -7,7 +7,9 @@ import (
 	"os"
 )
 
+// Главная функция проекта
 func main() {
+
 	args := os.Args[1:]
 
 	opt := project_types.Options{

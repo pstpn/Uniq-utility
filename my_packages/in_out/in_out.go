@@ -6,7 +6,9 @@ import (
 	"io"
 )
 
+// PrintIncorrectMsg - Функция вывода информационного сообщения при возникновении ошибки
 func PrintIncorrectMsg() {
+
 	color.Red("\n\nIncorrect args! \n\nUsage example:\n" +
 		"uniq [-c | -d | -u] [-i] [-f num] [-s chars] [input_file [output_file]]\n\n")
 
@@ -17,7 +19,9 @@ func PrintIncorrectMsg() {
 		"after num_fields fields are counted\n(ignoring the delimiter space after the last field).\n\n" + "-i - do not take into account the case of letters.\n\n")
 }
 
+// GetText - Функция, реализующая чтение входных данных (строк)
 func GetText(r io.Reader) []string {
+
 	scanner := bufio.NewScanner(r)
 
 	var inStrings []string
@@ -29,7 +33,9 @@ func GetText(r io.Reader) []string {
 	return inStrings
 }
 
+// WriteText - Функция, реализующая запись выходных данных (строк) в io.Writer
 func WriteText(w io.Writer, data []string) error {
+	
 	var err error
 
 	for _, curString := range data {

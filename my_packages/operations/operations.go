@@ -6,7 +6,9 @@ import (
 	"strings"
 )
 
+// ParseOptions - Функция получения входных опций для обработки строк
 func ParseOptions(opt *project_types.Options, params []string) bool {
+
 	paramsCount := len(params)
 
 	for i, curParam := range params {
@@ -75,7 +77,9 @@ func ParseOptions(opt *project_types.Options, params []string) bool {
 	return false
 }
 
+// getNewStartIndex - Вспомогательная функция получения нового начала строки
 func getNewStartIndex(numFields int, numChars int, inStr string) int {
+
 	newStart := 0
 	wordsCount := 0
 	strLen := len(inStr)
@@ -98,7 +102,9 @@ func getNewStartIndex(numFields int, numChars int, inStr string) int {
 	return newStart
 }
 
+// UniqText - Функция, реализующая поиск уникальных строк в тексте с заданными параметрами
 func UniqText(opt project_types.Options, inData []string) []string {
+
 	outData := make(map[string]int)
 
 	var outStrings []string

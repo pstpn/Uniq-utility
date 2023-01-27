@@ -1,5 +1,7 @@
 package project_types
 
+// Options - Тип данных, реализующий структуру для удобного хранения
+// входных опций, заданных пользователем
 type Options struct {
 	Input           string
 	Output          string
